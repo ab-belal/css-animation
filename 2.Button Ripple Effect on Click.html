@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button Ripple Effect on Click</title>
+
+    <!--favicon icon-->
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--bootstrap min css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-color: #000000;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        a.btn {
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 30px;
+            font-size: 18px;
+            text-transform: capitalize;
+            background-color: blueviolet;
+            color: #fff;
+            position: relative;
+            border: none;
+        }
+
+        a.btn span {
+            position: absolute;
+            background-color: rgb(17, 125, 139);
+            /* border-radius: 100%; */
+            width: 100px;
+                height: 100px;
+            /* /animation: ripple 1s linear infinite; */
+        }
+
+        @keyframes ripple {
+            0%{
+                width: 0;
+                height: 0;
+            }
+            100%{
+                width: 100px;
+                height: 100px;
+            }
+        }
+       
+        
+    </style>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-8 col-offset-2">
+                <div class="ripple-effect-btn">
+                   <a href="#" class="btn">ripple effect button</a>
+                   <a href="#" class="btn">ripple effect button</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+   const button = document.querySelectorAll('a');
+    button.forEach(btn => {
+        btn.addEventListener('click', function(e){
+            console.log(e);
+           let x = e.clientX - e.target.offsetLeft;
+           let y = e.clientY - e.target.offsetTop;
+           console.log(e.clientX, e.target.offsetLeft);
+           console.log(e.clientY, e.target.offsetTop);
+
+           let ripple = document.createElement('span');
+           ripple.style.left = x +'px';
+           ripple.style.top = y +'px';
+           this.appendChild(ripple);
+           //console.log(x, y);
+
+            // setTimeout(function(){
+            //    ripple.remove();
+            // }, 1000)
+        });
+    });
+</script>
+    
+</body>
+
+</html>

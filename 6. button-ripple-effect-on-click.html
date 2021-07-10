@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title>Button Ripple Effect on Click</title>
+
+    <!--favicon icon-->
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--bootstrap min css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu-hover-effect.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <ul class="btn-ripple-effect">
+            <li>
+                <a href="#" class="btn-default ripple-effect">Button</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const ripple_buttons = document.querySelectorAll('.ripple-effect');
+        ripple_buttons.forEach( btn => {
+            btn.addEventListener('click', function(e){
+                
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+                
+                let ripples = document.createElement('span');
+                ripples.style.left = x + 'px';
+                ripples.style.top = y + 'px';
+                
+                this.appendChild(ripples);
+                
+                setTimeout( ()=> {
+                    ripples.remove()
+                }, 1000);
+            })
+        })
+    </script>
+
+    <!-- all jQuary activation code here and always it will be bottom of all script tag -->
+    
+    
+</body>
+
+</html>

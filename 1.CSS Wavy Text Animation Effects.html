@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Wavy Text Animation Effects</title>
+
+    <!--favicon icon-->
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--bootstrap min css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-color: #000000;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .text-wave {
+            -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0,0,0,0.3));
+            position: relative;
+        }
+        .text-wave span {
+            position: relative;
+            display: inline-block;
+            color: #fff;
+            font-size: 30px;
+            text-transform: uppercase;
+            animation: wave 2s ease-in-out infinite;
+            animation-delay: calc( 0.1s * var(--i) );
+        }
+
+        @keyframes wave {
+            0%{
+                transform: translateY(0);
+            }
+            20%{
+                transform: translateY(-40px);
+            }
+            40%, 100%{
+                transform: translateY(0);
+            }
+        }
+        
+    </style>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-8 col-offset-2">
+                <div class="text-wave">
+                    <span style="--i:1;">l</span>
+                    <span style="--i:2;">o</span>
+                    <span style="--i:3;">a</span>
+                    <span style="--i:4;">d</span>
+                    <span style="--i:5;">i</span>
+                    <span style="--i:6;">n</span>
+                    <span style="--i:7;">g</span>
+                    <span style="--i:8;">.</span>
+                    <span style="--i:9;">.</span>
+                    <span style="--i:10;">.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+   
+</script>
+    
+    
+<!-- ------------------- -->
+    <!-- jQuary library -->
+    <script src="js/jquery.min.js"></script>
+
+    <!--bootstrap js-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- all jQuary activation code here and always it will be bottom of all script tag -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

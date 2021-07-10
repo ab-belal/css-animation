@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>page scroll indicator</title>
+
+    <!--favicon icon-->
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--bootstrap min css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 m-auto">
+                <div class="showcase-wrapper">
+                    <div class="thumb-previewer">
+                        <img src="images/thumb-img1.jpg" alt="images" class="img-fluid">
+                    </div>
+
+                    <ul class="thumb-img">
+                        <li>
+                            <a href="images/thumb-img1.jpg" target="thumb-previewer">
+                                <img src="images/thumb-img1.jpg" alt="thumb-img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="images/thumb-img2.jpg" target="thumb-previewer">
+                                <img src="images/thumb-img2.jpg" alt="thumb-img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="images/thumb-img3.jpg" target="thumb-previewer">
+                                <img src="images/thumb-img3.jpg"  alt="thumb-img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="images/thumb-img4.jpg" target="thumb-previewer">
+                                <img src="images/thumb-img4.jpg" alt="thumb-img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="images/thumb-img5.jpg" target="thumb-previewer">
+                                <img src="images/thumb-img5.jpg" alt="thumb-img">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------- -->
+    <!-- jQuary library -->
+    <script src="js/jquery.min.js"></script>
+
+    <!--bootstrap js-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- all jQuary activation code here and always it will be bottom of all script tag -->
+    <script src="js/main.js"></script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+
+            $('.thumb-img a').on("click", function(e){
+                e.preventDefault();
+                $('.thumb-previewer img').attr("src", $(this).attr("href"));
+            });
+
+        });
+    </script>
+</body>
+
+</html>

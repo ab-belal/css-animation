@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>custom range slider</title>
+
+    <!--favicon icon-->
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--bootstrap min css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="progress-bar" id="myBar"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 m-auto">
+                <div class="main-content">
+                    <input class="range-input" type="range" name="" value="0" min="0" max="1000" onmousemove="rangeval(this.value)">
+                    <span id="rangeval"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #rangeval{
+            display: block;
+        }
+        .range-input {
+            width: 350px;
+            height: 20px;
+            -webkit-appearance: none;
+            outline: none;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 0;
+            border: 1px solid #ddd;
+            box-shadow: inset 0 0 6px!important;
+        }
+        .range-input::-webkit-slider-thumb{
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: red;
+            border: 4px solid #fff;
+            box-shadow: -400px 0 0 400px red;
+        }
+
+    </style>
+
+    <script>
+        function rangeval(value) {
+            document.getElementById('rangeval').innerHTML = value;
+        }
+
+    </script>
+    <!-- ------------------- -->
+    <!-- jQuary library -->
+    <script src="js/jquery.min.js"></script>
+
+    <!--bootstrap js-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- all jQuary activation code here and always it will be bottom of all script tag -->
+    <!--<script src="js/main.js"></script>-->
+</body>
+
+</html>

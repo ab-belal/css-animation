@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Clip-path Button Hover Effects</title>
+
+    <!--favicon icon-->
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--bootstrap min css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900");
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        *:focus {
+            box-shadow: none;
+            border: none;
+            outline: none;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        body,
+        p {
+            font: 400 18px/30px "Poppins", sans-serif;
+            color: #5d6483;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4154fe;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        figur,
+        a {
+            margin: 0px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+            -webkit-font-variant-ligatures: common-ligatures;
+            font-variant-ligatures: common-ligatures;
+        }
+
+        a:hover,
+        a:focus,
+        input:focus,
+        button:focus,
+        a:active {
+            text-decoration: none;
+            outline: none;
+            outline-offset: 0px;
+            box-shadow: none;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        input,
+        textarea,
+        select {
+            border: 1px solid #d1d1d1;
+            font-size: 14px;
+            padding: 8px 15px;
+            width: 100%;
+            margin: 0 0 20px 0;
+            resize: none;
+        }
+
+        /* ----------end default style----------- */
+
+        /* -----start main style-------- */
+        .container {
+            margin-top: 50px;
+        }
+
+        .container .btn-default {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            padding: 12px 26px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            position: relative;
+        }
+        .container .btn-default:before {
+            content: "Download Me";
+            background: #ef00ff;
+            color: #fff;
+            padding: 12px 26px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 0.5s ease;
+            clip-path: polygon(92% 0, 102% 0%, 102% 102%, 92% 102%, 85% 47%);
+        }
+        .container .btn-default:hover:before {
+            clip-path: polygon(0 0, 102% 0%, 102% 102%, 0 102%, 0% 50%);
+        }
+    </style>
+
+    <div class="container">
+        <a href="" class="btn-default">Download Me</a>
+        <a href="https://bennettfeely.com/clippy/" class="clippy">clippy</a>
+    </div>
+
+    <script type="text/javascript">
+
+    </script>
+
+</body>
+
+</html>
