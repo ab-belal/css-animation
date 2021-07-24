@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wrap text around image</title>
+
+    <!--favicon icon-->
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--bootstrap min css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900");
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        *:focus {
+            box-shadow: none;
+            border: none;
+            outline: none;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        body,
+        p {
+            font: 400 18px/30px "Poppins", sans-serif;
+            color: #5d6483;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4154fe;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        figur,
+        a {
+            margin: 0px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+            -webkit-font-variant-ligatures: common-ligatures;
+            font-variant-ligatures: common-ligatures;
+        }
+
+        a:hover,
+        a:focus,
+        input:focus,
+        button:focus,
+        a:active {
+            text-decoration: none;
+            outline: none;
+            outline-offset: 0px;
+            box-shadow: none;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        input,
+        textarea,
+        select {
+            border: 1px solid #d1d1d1;
+            font-size: 14px;
+            padding: 8px 15px;
+            width: 100%;
+            margin: 0 0 20px 0;
+            resize: none;
+        }
+
+        /* ----------end default style----------- */
+
+        /* -----start main style-------- */
+        .container {
+            margin-top: 50px;
+            position: relative;
+        }
+        .video-wrapper {
+            width: 100%;
+            height: 750px;
+        }
+        .container .video1{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .container video {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .container .video2 {
+            mix-blend-mode: screen;
+            filter: brightness(2);
+        }
+
+        
+    </style>
+
+    <div class="container">
+        <div class="video-wrapper">
+            <!-- <video src="../video/goncharenok.mp4" class="video1" type="video/mp4" autoplay muted loop></video> -->
+            <img src="images/natures.jpg" class="video1" alt="" />
+            <video src="../video/black&white.mp4" class="video2" type="video/mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+    </script>
+
+</body>
+
+</html>

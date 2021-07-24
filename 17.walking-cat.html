@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Walking Cat</title>
+
+    <!--favicon icon-->
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--bootstrap min css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900");
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        *:focus {
+            box-shadow: none;
+            border: none;
+            outline: none;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        body,
+        p {
+            font: 400 18px/30px "Poppins", sans-serif;
+            color: #5d6483;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4154fe;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        figur,
+        a {
+            margin: 0px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+            -webkit-font-variant-ligatures: common-ligatures;
+            font-variant-ligatures: common-ligatures;
+        }
+
+        a:hover,
+        a:focus,
+        input:focus,
+        button:focus,
+        a:active {
+            text-decoration: none;
+            outline: none;
+            outline-offset: 0px;
+            box-shadow: none;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        input,
+        textarea,
+        select {
+            border: 1px solid #d1d1d1;
+            font-size: 14px;
+            padding: 8px 15px;
+            width: 100%;
+            resize: none;
+        }
+        .container {
+            margin-top: 50px;
+            position: relative;
+        }
+
+        /* ----------end default style----------- */
+    </style>
+
+    <style>
+        
+        /* -----start main style-------- */
+        .walking-cat-wrapper {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .walking-cat-frame {
+            width: 400px;
+            height: 200px;
+            background: url('images/walking-cat.png') no-repeat;
+            background-position: 0 0;
+        }
+
+        .walking-cat-frame.walk1 {
+            background-position: 0 -2190px;
+            animation: catWalk1 1s steps(12) infinite;
+        }
+        .walking-cat-frame.walk2 {
+            background-position: -1210px 0;
+            animation: catWalk2 1s steps(12) infinite;
+        }
+        .walking-cat-frame.walk3 {
+            background-position: -400px -996px;
+            animation: catWalk3 1s steps(6) 1;
+        }
+        .walking-cat-frame.walk4 {
+            background-position: -790px -2190px;
+            animation: catWalk4 1s steps(12) infinite;
+        }
+
+        @keyframes catWalk1 {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 0 -2400px;
+            }
+        }
+        
+        @keyframes catWalk2 {
+            0% {
+                background-position: -1210px 0;
+            }
+            100% {
+                background-position: -1210px -2390px;
+            }
+        }
+
+        @keyframes catWalk3 {
+            0% {
+                background-position: -400px 0;
+            }
+            100% {
+                background-position: -400px -1195px;
+            }
+        }
+
+        @keyframes catWalk4 {
+            0% {
+                background-position: -790px 0;
+            }
+            100% {
+                background-position: -790px -2400px;
+            }
+        }
+        
+    </style>
+
+    <div class="container">
+        <div class="walking-cat-wrapper">
+            <div class="walking-cat-frame walk1"></div>
+            <div class="walking-cat-frame walk2"></div>
+            <div class="walking-cat-frame walk3"></div>
+            <div class="walking-cat-frame walk4"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+    </script>
+
+</body>
+
+</html>
